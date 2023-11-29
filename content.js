@@ -1,5 +1,3 @@
-console.log("Content script executed.");
-
 // Function to send a message to the background script and return a Promise
 async function sendMessageToBackground(text, sourceLang, targetLang) {
     try {
@@ -29,7 +27,6 @@ document.addEventListener('keyup', async (event) => {
     // Check if both the "Ctrl" key and "Enter" key are pressed
     if (event.key === 'Enter' && event.ctrlKey) {
         let selectedText = window.getSelection().toString().trim();
-        console.log(selectedText);
         if (selectedText) {
             try {
                 const sourceLang = 'auto'; // You can modify this as needed
